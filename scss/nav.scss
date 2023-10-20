@@ -1,0 +1,119 @@
+.navHolder{
+    position: fixed;
+    top: 10px;
+    // right: 10px;
+    // left: -10px;
+    // left: 100%;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    .logo{
+        margin-top: -10px;
+        height: 64px;
+        // padding: 20px;
+        padding: 0 10px;
+        background-color: rgb(173, 238, 205);
+        // height: 50px;
+        img{
+            height: 100%;
+        }
+    }
+}
+
+.bars{
+    display: none;
+    padding: 0 10px;
+    // right: -10px;
+}
+
+.bars .bar{
+    display: block;
+    width: 25px;
+    margin: 5px 0;
+    background-color: #fff;
+    height: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.bars:hover .bar{
+    background-color: #000;
+}
+
+.bars.active .bar:nth-child(2){
+    opacity: 0;
+}
+
+.bars.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.bars.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.links{
+    display: flex;
+    // height: 50px;
+    height: 100%;
+    background-color: rgb(173, 238, 205);
+    overflow: hidden;
+    // top: -20px;
+    // left: 10px;
+    margin-right: -10px;
+    margin-top: -10px;
+    // right: -10px;
+    // margin-left: -100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: height 0.4s, opacity 0.2s ease-in;
+    a{
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        // outline: auto;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in;
+    }
+    a:hover{
+        background-color: rgb(255, 255, 255);
+
+    }
+}
+
+.links.active{
+    height: 100%;
+    opacity: 1;
+}
+
+@media screen and (max-width: 960px){
+    .navHolder{
+        // height: 100%;
+        // width: 25px;
+        // float: right;
+        .logo{
+            background-color: rgb(209, 243, 226);
+            img{
+                background-color: rgb(209, 243, 226);
+            }
+        }
+    }
+    .bars{
+        display: block;
+        right: 0;
+    }
+    .links{
+        height: 0;
+        opacity: 0;
+        flex-direction: column;
+        a{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

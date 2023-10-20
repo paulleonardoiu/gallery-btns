@@ -1,0 +1,104 @@
+.page{
+    // display: flex;
+    width: 100%;
+    height: 100%;
+    // padding-top: 60px;
+    // padding: 140px;
+    // background-color: rgb(209, 243, 226);
+
+}
+
+.title__home{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero--home{
+    height: 400px;
+    width: 100%;
+    // background-image: linear-gradient(rgba(127, 199, 171, 0.5),rgba(127, 199, 171, 0.5)),url('../images/marguerite-flowers-1920x1080.jpg');
+    background-image: url('../images/marguerite-flowers-1920x1080.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.flowers__container{
+    background-color: #000;
+    padding: 100px 0;
+    .title{
+        h1{
+            color: #fff;
+            text-align: center;
+        }
+    }
+    .previews{
+        width: 100%;
+        gap: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        .flower-preview{
+            transition: opacity 0.2s ease-in;
+            img{
+                width: 250px;
+                aspect-ratio: 1/1;
+            }
+        }
+        .flower-preview:hover{
+            opacity: 0.6;
+        }
+    }
+    .see-more{
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            text-decoration: none;
+        }
+    }
+}
+
+.btn{
+    color: #000;
+    font-weight: bold;
+    background-color: rgb(173, 238, 205, 0.8);
+    width: 150px;
+    text-align: center;
+    padding: 15px 40px;
+    transition: background-color 0.2s ease-in;
+    cursor: pointer;
+}
+
+.btn--view, .btn--edit, .btn--delete{
+    display: none;
+}
+
+// .btn--view{
+//     display: none;
+// }
+
+// .btn--edit{
+//     display: none;
+// }
+
+
+.btn--delete{
+    background-color: rgba(255,0,0,0.5);
+    // display: none;
+}
+
+.btn.btn--delete:hover{
+    background-color: rgba(255,0,0,1);
+}
+
+.btn:hover{
+    background-color: #fff;
+}

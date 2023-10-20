@@ -1,0 +1,14 @@
+{
+  "name": "gallery-btns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "serve": "set PORT=8000 && live-server"
+  },
+  "author": "",
+  "license": "ISC"
+}
